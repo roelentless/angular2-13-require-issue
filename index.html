@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>electron test</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<script>-->
+        <!--window.nodeRequire = require;-->
+        <!--delete window.require;-->
+        <!--delete window.exports;-->
+        <!--delete window.module;-->
+    <!--</script>-->
+
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <script>
+        System.config({
+            packages: {
+              src: {
+                format: 'register',
+                defaultExtension: 'js'
+              }
+            }
+        });
+
+        System
+                .import('./src/boot')
+                .then(null, console.error.bind(console));
+    </script>
+
+    <base href="/">
+</head>
+<body>
+    <my-app>Starting application...</my-app>
+</body>
+</html>

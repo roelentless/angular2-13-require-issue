@@ -1,0 +1,30 @@
+{
+  "name": "testng2",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node_modules/.bin/electron main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "2.0.0-beta.13",
+    "systemjs": "0.19.25",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "0.6.6",
+
+    "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^0.37.4",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.11"
+  }
+}
